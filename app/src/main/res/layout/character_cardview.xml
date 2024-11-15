@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardMaxElevation="3dp">
+
+    <LinearLayout style="@style/characterCard_layout">
+
+        <ImageView android:id="@+id/cardImage" style="@style/characterCard_imageSize"/>
+
+        <LinearLayout style="@style/characterCard_textLayout">
+            <TextView android:id="@+id/cardText" style="@style/characterCard_title"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Super Mario Bros Aplicación</string>
+    <string name="appTitle">Super Mario Bros Aplicación</string>
+    <string name="characterDetailBtn">Volver</string>
+    <string name="desc_mario">Héroe del Reino Champiñón</string>
+    <string name="desc_luigi">Hermano de Mario</string>
+    <string name="desc_peach">Princesa del Reino Champiñón</string>
+    <string name="desc_toad">Leal sirviente de Peach</string>
+    <string name="desc_unknown">Personaje desconocido</string>
+    <string name="skills_mario">Salta alto, corre rápido</string>
+    <string name="skills_luigi">Salta más alto que Mario</string>
+    <string name="skills_peach">Flota en el aire</string>
+    <string name="skills_toad">Es muy rápido y fuerte</string>
+    <string name="skills_none">Sin habilidades especiales</string>
+    <string name="menu_context">Acerca de…</string>
+    <string name="about_message">Aplicación desarrollada por Carlos Padilla. Versión 1.0.</string>
+    <string name="snackbar_1">Bienvenidos al mundo de Mario</string>
+    <string name="toast_1">Se ha seleccionado el personaje</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="change_lang">Cambiar idioma a inglés</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="idioma">Idioma</string>
+    <string name="home">Home</string>
+</resources>

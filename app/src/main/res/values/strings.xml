@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Super Mario Bros App</string>
+    <string name="appTitle">Super Mario Bros App</string>
+    <string name="characterDetailBtn">Return</string>
+    <string name="desc_mario">Hero of the Mushroom Kingdom</string>
+    <string name="desc_luigi">Mario\'s Brother</string>
+    <string name="desc_peach">Princess of the Mushroom Kingdom</string>
+    <string name="desc_toad">Loyal servant of Peach</string>
+    <string name="desc_unknown">Unknown character</string>
+    <string name="skills_mario">Jumps high, runs fast</string>
+    <string name="skills_luigi">Jumps higher than Mario</string>
+    <string name="skills_peach">Floats in the air</string>
+    <string name="skills_toad">Very fast and strong</string>
+    <string name="skills_none">No special skills</string>
+    <string name="menu_context">About…</string>
+    <string name="about_message">Application developed by Carlos Padilla. Version 1.0.</string>
+    <string name="snackbar_1">Welcome to Mario\'s world</string>
+    <string name="toast_1">The following character has been selected</string>
+    <string name="navigation_drawer_open">Open menu</string>
+    <string name="navigation_drawer_close">Close menu</string>
+    <string name="change_lang">Change language to English</string>
+    <string name="ajustes">Settings</string>
+    <string name="idioma">Language </string>
+    <string name="home">Home</string>
+</resources>
