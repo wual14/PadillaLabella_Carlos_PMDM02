@@ -14,6 +14,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+/**
+ * CharacterDetailActivity muestra los detalles de un personaje seleccionado, incluyendo su imagen,
+ * nombre, descripción y habilidades.
+ * También incluye un botón para regresar a la actividad anterior.
+ */
 public class CharacterDetailActivity extends AppCompatActivity {
 
     @Override

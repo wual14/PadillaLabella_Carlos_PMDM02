@@ -36,6 +36,10 @@ import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
 
+/**
+ * MainActivity es la clase principal de la aplicación que gestiona la interfaz de usuario.
+ * Configura el DrawerLayout, la navegación, y la interacción con las preferencias de idioma.
+ */
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerCharacter;
@@ -44,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private SharedPreferences preferences;
 
+    /**
+     * Método que se llama cuando se crea la actividad. Configura los elementos visuales, la barra de herramientas,
+     * el menú de navegación y las preferencias.
+     *
+     * @param savedInstanceState El estado guardado de la actividad, si existe.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Configuración de la barra de herramientas
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -77,13 +88,21 @@ public class MainActivity extends AppCompatActivity {
         initElements();
     }
 
-
+    /**
+     * Infla el menú de opciones de la aplicación.
+     *
+     * @param menu El menú en el que inflar las opciones.
+     * @return true si el menú se infló correctamente.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    /**
+     * Muestra un cuadro de diálogo con información sobre la aplicación.
+     */
     private void showAboutDialog() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.app_name)
@@ -93,6 +112,11 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    /**
+     * Cambia el idioma de la aplicación según el parámetro proporcionado.
+     *
+     * @param isEnglish Si es true, cambia el idioma a inglés; si es false, a español.
+     */
     private void changeLanguage(boolean isEnglish) {
         String language = isEnglish ? "en" : "es";
         Locale locale = new Locale(language);
@@ -104,6 +128,12 @@ public class MainActivity extends AppCompatActivity {
         recreate();
     }
 
+    /**
+     * Gestiona las opciones seleccionadas del menú de opciones.
+     *
+     * @param item El item del menú que fue seleccionado.
+     * @return true si se gestionó la opción correctamente.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -116,12 +146,14 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Muestra un cuadro de diálogo para cambiar el idioma de la aplicación utilizando un Switch.
+     */
     private void showLanguageSwitch() {
 
         View view = LayoutInflater.from(this).inflate(R.layout.dialog_language_switch, null);
         Switch switchLanguage = view.findViewById(R.id.switch_language);
 
-        // Cargar preferencia guardada
         switchLanguage.setChecked(preferences.getBoolean("language", false));
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -140,7 +172,11 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-
+    /**
+     * Configura el contenido del menú de navegación.
+     *
+     * @param navigationView El NavigationView que contiene los elementos de navegación.
+     */
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
@@ -155,6 +191,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Inicializa los elementos de la interfaz, como el RecyclerView para mostrar los personajes.
+     */
     public void initElements() {
 
         recyclerCharacter = findViewById(R.id.recycler);

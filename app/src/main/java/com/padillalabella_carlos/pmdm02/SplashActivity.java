@@ -12,6 +12,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SplashActivity extends AppCompatActivity {
 
+    /**
+     * Se llama cuando se crea la actividad.
+     * Este método configura la vista de la pantalla de presentación y maneja la transición a la actividad principal después de un retraso.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
